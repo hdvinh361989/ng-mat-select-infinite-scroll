@@ -77,7 +77,8 @@ export class MatSelectInfiniteScrollDirective implements OnInit, OnDestroy, Afte
       const infiniteScrollDistance = this.singleOptionHeight * countOfRenderedOptions;
       const threshold = this.thrPc !== 0 ? (infiniteScrollDistance * this.thrPc) : this.thrPx;
 
-      const scrolledDistance = this.panel.clientHeight + event.target.scrollTop;
+      const target = event.target || this.panel;
+      const scrolledDistance = this.panel.clientHeight + target.scrollTop;
 
       if ((scrolledDistance + threshold) >= infiniteScrollDistance) {
         this.ngZone.run(() => this.infiniteScroll.emit());

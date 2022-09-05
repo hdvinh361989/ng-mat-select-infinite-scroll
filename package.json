@@ -8,7 +8,9 @@
     "develop": "ng build ng-mat-select-infinite-scroll --watch --configuration development",
     "test": "ng test",
     "npm_pack": "cd dist/ng-mat-select-infinite-scroll && npm pack",
-    "package": "npm run build && npm run npm_pack"
+    "package": "npm run build && npm run npm_pack",
+    "publishLib": "cd dist/ng-mat-select-infinite-scroll && npm publish",
+    "BPP": "npm run package && npm run publishLib #BUILD PACKAGE n PUBLISH"
   },
   "private": false,
   "dependencies": {
