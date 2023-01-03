@@ -1,6 +1,6 @@
 {
-  "name": "ng-mat-select-infinite-scroll",
-  "version": "4.0.0",
+  "name": "ng-mat-select-infinite-scroll-v",
+  "version": "4.0.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -9,7 +9,9 @@
     "test": "ng test",
     "npm_pack": "cd dist/ng-mat-select-infinite-scroll && npm pack",
     "package": "npm run build && npm run npm_pack",
-    "publishLib": "cd dist/ng-mat-select-infinite-scroll && npm publish",
+    "publishLib": "cp -f README.md dist/ng-mat-select-infinite-scroll && cp -f README.md projects/ng-mat-select-infinite-scroll && cd dist/ng-mat-select-infinite-scroll && npm publish",
+    "XUX": "npm version minor && cd projects/ng-mat-select-infinite-scroll && npm version minor",
+    "XXU": "npm version patch && cd projects/ng-mat-select-infinite-scroll && npm version patch",
     "BPP": "npm run package && npm run publishLib #BUILD PACKAGE n PUBLISH"
   },
   "private": false,

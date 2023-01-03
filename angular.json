@@ -139,5 +139,8 @@
       }
     }
   },
-  "defaultProject": "ng-mat-select-infinite-scroll"
+  "defaultProject": "ng-mat-select-infinite-scroll",
+  "cli": {
+    "analytics": false
+  }
 }
