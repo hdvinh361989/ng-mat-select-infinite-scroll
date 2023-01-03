@@ -1,0 +1,31 @@
+{
+  "name": "ng-mat-select-infinite-scroll",
+  "projectType": "library",
+  "sourceRoot": "libs/ng-mat-select-infinite-scroll/src",
+  "prefix": "ms",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:package",
+      "options": {
+        "project": "libs/ng-mat-select-infinite-scroll/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/ng-mat-select-infinite-scroll/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/ng-mat-select-infinite-scroll/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/ng-mat-select-infinite-scroll/src/test.ts",
+        "tsConfig": "libs/ng-mat-select-infinite-scroll/tsconfig.spec.json",
+        "karmaConfig": "libs/ng-mat-select-infinite-scroll/karma.conf.js"
+      }
+    }
+  }
+}

@@ -1,5 +1,5 @@
 import {AfterViewInit, Directive, EventEmitter, Input, NgZone, OnDestroy, OnInit, Output} from '@angular/core';
-import {MatSelect} from '@angular/material/select';
+import {MatLegacySelect} from '@angular/material/legacy-select';
 import {debounceTime, takeUntil, tap} from 'rxjs/operators';
 import {fromEvent, Subject} from 'rxjs';
 
@@ -23,7 +23,7 @@ export class MatSelectInfiniteScrollDirective implements OnInit, OnDestroy, Afte
 
   private destroyed$ = new Subject<boolean>();
 
-  constructor(private matSelect: MatSelect, private ngZone: NgZone) {
+  constructor(private matSelect: MatLegacySelect, private ngZone: NgZone) {
   }
 
   ngOnInit() {

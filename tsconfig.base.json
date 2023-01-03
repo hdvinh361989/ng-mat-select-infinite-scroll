@@ -1,8 +1,7 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
+    "baseUrl": ".",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
@@ -15,10 +14,7 @@
     "downlevelIteration": true,
     "paths": {
       "ng-mat-select-infinite-scroll": [
-        "dist/ng-mat-select-infinite-scroll"
-      ],
-      "ng-mat-select-infinite-scroll/*": [
-        "dist/ng-mat-select-infinite-scroll/*"
+        "libs/ng-mat-select-infinite-scroll/src/public-api.ts"
       ]
     },
     "experimentalDecorators": true,
@@ -29,12 +25,17 @@
     "lib": [
       "es2020",
       "dom"
-    ]
+    ],
+    "rootDir": "."
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
     "strictTemplates": true
-  }
+  },
+  "exclude": [
+    "node_modules",
+    "tmp"
+  ]
 }
